@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #FAF7EF;
+    --foreground: #111111;
+    --card: #FFFFFF;
+    --card-foreground: #111111;
+    --primary: #FF2B2B;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFCC00;
+    --secondary-foreground: #111111;
+    --muted: #F3EFE6;
+    --muted-foreground: #6B7280;
+    --border: #EBE5D8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF7EF;
+    color: #111111;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Instant sleek button & touch responsiveness */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, button, a, input {
+  touch-action: manipulation;
+}
+
+button {
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+button, a {
+  transition: transform 0.12s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.15s ease, border-color 0.15s ease;
+}
+
+button:active:not(:disabled), a:active {
+  transform: scale(0.97);
+}
+
+/* Red & Yellow Pill Buttons matching reference */
+.red-pill-button {
+  background-color: #FF2B2B;
+  color: #FFFFFF;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(255, 43, 43, 0.22);
+  transition: all 0.15s ease-in-out;
+}
+
+.red-pill-button:hover {
+  background-color: #E82020;
+  transform: translateY(-1px);
+}
+
+.red-pill-button:active {
+  transform: scale(0.98);
+}
+
+.yellow-pill-button {
+  background-color: #FFC72C;
+  color: #111111;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(255, 199, 44, 0.25);
+  transition: all 0.15s ease-in-out;
+}
+
+.yellow-pill-button:hover {
+  background-color: #EBB21C;
+  transform: translateY(-1px);
+}
+
+.yellow-pill-button:active {
+  transform: scale(0.98);
+}
+
+/* Shake Animation for Wrong Prediction */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}

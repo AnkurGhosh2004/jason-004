@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -37,6 +38,9 @@ export const metadata: Metadata = {
     title: "LieLoop 👀 — Think you know them? Prove it.",
     description: "The viral friend lie prediction game.",
   },
+  other: {
+    "google-adsense-account": "ca-pub-7812422659353355",
+  },
 };
 
 export const viewport: Viewport = {
@@ -58,10 +62,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <head>
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7812422659353355"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FAF7EF] text-[#111111] selection:bg-[#FF2B2B] selection:text-white">

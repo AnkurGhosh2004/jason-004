@@ -1,6 +1,7 @@
 # LIELOOP (Lie Loop) 👀
 > *"How well do you really know your friend's lies?"*
 
+Updated deployment 
 A viral, mobile-first social party web game where creators answer questions secretly about their everyday habits, excuses, and harmless white lies—and friends attempt to predict what they answered.
 
 ---
